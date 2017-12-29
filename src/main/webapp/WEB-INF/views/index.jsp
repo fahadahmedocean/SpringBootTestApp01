@@ -4,32 +4,32 @@
 <html lang="en">
 
 <body>
-    <h1> This is our First spring Boot Application </h1>
+<h1> This is our First spring Boot App</h1>
 
-    <%--<h3>${myMessage}</h3>--%>
-
-   <%-- <table>
-        <thead>
+<h3>${myMessage}</h3>
+<a href="/upsertStudent">Create Student</a>
+<table>
+    <thead>
+    <tr>
+        <th>Sl#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Roll No</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${studentList}" var="std" varStatus="status">
         <tr>
-            <th>Sl#</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Roll No</th>
+            <td>${status.index+1}</td>
+            <td>${std.name}</td>
+            <td>${std.age}</td>
+            <td>${std.rolNo}</td>
         </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${studentList}" var="std" varStatus="status">
-            <tr>
-                <td>${status.index+1}</td>
-                <td>${std.name}</td>
-                <td>${std.age}</td>
-                <td>${std.rolNo}</td>
-            </tr>
-        </c:forEach>
+    </c:forEach>
 
 
-        </tbody>
-    </table>--%>
+    </tbody>
+</table>
 
 </body>
 
